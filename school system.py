@@ -1,14 +1,14 @@
 Principal = str('Ronald')
-Password = int(101112)
+Password = str(101112)
 
 Login = str(input('\nEnter your login: '))
-Password_register = int(input('Enter your Password: '))
+Password_register = str(input('Enter your Password: '))
 
 if Login != Principal:
     Login = str(input("\nThis login doesn't exist. Try again: "))
 
 while Password_register != Password:
-    Password_register = int(input("\nyour pin is wrong. Try again:"))
+    Password_register = str(input("\nyour pin is wrong. Try again:"))
 
 print ("\nwelcome to the school system {}".format (Login))
 
@@ -19,6 +19,7 @@ choice = int(input('\n1 - Add a Student\n2 - Delete a Student\n3- Exit \nChoice:
 
 if choice >3:
     print ('Invalid choice')
+    input ('press "enter" to exit: ')
 
 
 elif choice == 1:
@@ -27,6 +28,7 @@ elif choice == 1:
     Set_Age = int(input("Enter the new Student's Age:"))
     Student.append(Set_Student)
     print ("update student list: {}".format (Student))
+    input ('press "enter" to exit: ')
 
 elif choice == 2:
     print('=' * 20)
@@ -38,13 +40,17 @@ elif choice == 2:
     if Del_Student in Student:
         Student.remove(Del_Student)
         print('Student Removed.')
+        input ('press "enter" to exit: ')
     else:
         print('Student not found.')
+        input ('press "enter" to exit: ')
 
     print(Student)
 
 elif choice == 3:
-    print ('ok goodbye')
+    print ('Ok goodbye')
+    input ('press "enter" to exit: ')
+    
 
 
 #Ass: 𝕭𝖎𝖌𝕱𝖆𝖙
